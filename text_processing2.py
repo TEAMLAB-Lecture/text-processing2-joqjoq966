@@ -34,7 +34,7 @@ def digits_to_words(input_string):
         if i.isdigit():
             ret_string += number[int(i)]
             ret_string +=' '
-    digit_string = ret_string[:]
+    digit_string = ret_string[:-1]
     return digit_string
 
 
@@ -74,7 +74,7 @@ def to_camel_case(underscore_str):
     ret_string =''
     for val in ans_list:
         if val:
-            val = val[0].upper() + val[1:]
+            val = val[0].upper() + val[1:].lower()
             ret_string += val
     camelcase_str = ret_string
     camelcase_str = camelcase_str[0].lower() + camelcase_str[1:]
