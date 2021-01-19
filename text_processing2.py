@@ -78,6 +78,8 @@ def to_camel_case(underscore_str):
         if val:
             val = val[0].upper() + val[1:].lower()
             ret_string += val
+    if not ret_string:
+        return ""
     camelcase_str = ret_string[:]
     camelcase_str = camelcase_str[0].lower() + camelcase_str[1:]
     return camelcase_str
